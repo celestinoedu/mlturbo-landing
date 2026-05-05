@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de Privacidade do ML TURBO — extensão Chrome para vendedores do Mercado Livre.">
+  <title>Política de Privacidade — ML TURBO</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="privacidade.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a href="index.html" class="marca">
+        <span class="marca-icone">M</span>
+        <span class="marca-texto">ML TURBO</span>
+      </a>
+      <a href="index.html" class="botao botao-primario botao-pequeno">Voltar à página inicial</a>
+    </div>
+  </header>
+
+  <main class="privacidade">
+    <div class="container container-estreito">
+      <p class="privacidade-data">Última atualização: 5 de maio de 2026</p>
+      <h1>Política de Privacidade</h1>
+      <p class="privacidade-resumo">
+        Em uma frase: <strong>o ML TURBO coleta apenas o seu email para te identificar
+        no login</strong>. Não coletamos hábitos, não vendemos dados, não compartilhamos
+        com ninguém. Tudo o que a extensão precisa saber sobre seus anúncios fica no
+        seu navegador.
+      </p>
+
+      <section>
+        <h2>1. Quem somos</h2>
+        <p>
+          O <strong>ML TURBO</strong> é uma extensão para o navegador Google Chrome
+          desenvolvida para auxiliar vendedores do Mercado Livre na precificação de
+          anúncios. Esta política descreve como tratamos os dados quando você usa a
+          extensão.
+        </p>
+        <p>
+          <strong>Responsável:</strong> LOTUS NEGÓCIOS LTDA<br>
+          <strong>CNPJ:</strong> 45.537.878/0001-07<br>
+          <strong>Endereço:</strong> R. Alberto Alves, 223 — Mogi das Cruzes, SP — CEP 08745-350<br>
+          <strong>Contato:</strong>
+          <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Quais dados coletamos</h2>
+
+        <h3>2.1. Email</h3>
+        <p>
+          Coletamos o seu <strong>endereço de email</strong> exclusivamente para
+          autenticar o seu acesso à extensão (você precisa estar com o email cadastrado
+          na nossa lista de assinantes para poder usar a calculadora). O email é
+          enviado para o serviço de autenticação <strong>Supabase</strong> apenas no
+          momento do login para gerar e validar o código de acesso.
+        </p>
+
+        <h3>2.2. Token de sessão</h3>
+        <p>
+          Depois que você entra com o código de 6 dígitos, geramos um token que fica
+          armazenado <strong>localmente no seu navegador</strong> (chrome.storage.local)
+          para você não precisar logar toda vez. Esse token só é compartilhado com o
+          Supabase para validar que sua sessão ainda está ativa.
+        </p>
+
+        <h3>2.3. O que NÃO coletamos</h3>
+        <ul class="privacidade-lista-negativa">
+          <li>Seus anúncios, vendas, mensagens ou qualquer dado do seu painel de vendedor do Mercado Livre.</li>
+          <li>Histórico de navegação, hábitos de uso ou comportamento dentro da extensão.</li>
+          <li>Senhas, dados financeiros, dados de cartão de crédito ou bancários.</li>
+          <li>Localização, dados de dispositivo, identificadores de hardware.</li>
+          <li>Cookies de rastreamento ou análise (como Google Analytics).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Como tratamos os dados que você vê na extensão</h2>
+        <p>
+          Quando você abre um anúncio do Mercado Livre e usa a calculadora, a extensão
+          <strong>lê o conteúdo público da página</strong> (título, preço, frete, selo
+          de Envio Full) <strong>direto no seu navegador</strong>, sem enviar isso para
+          nenhum servidor nosso.
+        </p>
+        <p>
+          Para descobrir a taxa real da categoria e o custo fixo do anúncio, a extensão
+          consulta a <strong>API pública oficial do Mercado Livre</strong>
+          (<code>api.mercadolibre.com</code>). Essa consulta envia apenas o ID do
+          anúncio aberto — nunca os seus dados pessoais.
+        </p>
+        <p>
+          Os valores que você digita na calculadora (custo do produto, custos extras,
+          margem desejada) <strong>permanecem apenas no seu navegador</strong> durante
+          o uso. Não são salvos nem enviados a lugar nenhum.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Com quem compartilhamos dados</h2>
+        <p>Compartilhamos seu email apenas com:</p>
+        <ul>
+          <li>
+            <strong>Supabase</strong> (provedor de autenticação) — armazena o seu email
+            e gerencia o envio do código de 6 dígitos durante o login.
+            Política de privacidade do Supabase:
+            <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a>.
+          </li>
+        </ul>
+        <p>
+          <strong>Não vendemos, não cedemos e não compartilhamos seu email com nenhum
+          outro terceiro.</strong> Nem para fins de marketing, nem para análise, nem
+          para qualquer outro propósito.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Por quanto tempo guardamos seus dados</h2>
+        <p>
+          O seu email fica cadastrado enquanto você for assinante do ML TURBO. Quando
+          você cancelar o acesso (por desistência ou inadimplência), o seu email é
+          removido do nosso cadastro em até <strong>30 dias</strong>.
+        </p>
+        <p>
+          O token de sessão local é apagado automaticamente quando você clica em
+          "Sair" na extensão ou desinstala a extensão.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Seus direitos (LGPD)</h2>
+        <p>
+          A Lei Geral de Proteção de Dados (LGPD) garante que você pode, a qualquer
+          momento:
+        </p>
+        <ul>
+          <li>Confirmar se temos o seu email cadastrado.</li>
+          <li>Solicitar a correção de dados.</li>
+          <li>Solicitar a exclusão dos seus dados.</li>
+          <li>Solicitar uma cópia dos dados que temos sobre você.</li>
+          <li>Saber com quem compartilhamos os seus dados.</li>
+        </ul>
+        <p>
+          Para exercer qualquer um desses direitos, basta enviar um email para
+          <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>
+          com o assunto <strong>"LGPD — ML TURBO"</strong>. Respondemos em até 7 dias úteis.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Segurança</h2>
+        <p>
+          Seu email é armazenado no Supabase com criptografia em trânsito (HTTPS) e em
+          repouso. O token de sessão local não pode ser lido por outras extensões nem
+          por sites visitados, porque o Chrome isola o armazenamento de cada extensão.
+        </p>
+        <p>
+          Mesmo assim, nenhum sistema é 100% seguro. Se você suspeitar que sua conta
+          foi acessada indevidamente, troque o email cadastrado entrando em contato
+          conosco.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Crianças</h2>
+        <p>
+          O ML TURBO não é direcionado a menores de 18 anos. Não coletamos
+          conscientemente dados de menores. Se você é responsável e descobriu que
+          uma criança forneceu o email pra usar a extensão, entre em contato e
+          removeremos o cadastro.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Mudanças nesta política</h2>
+        <p>
+          Se mudarmos algo importante nesta política, atualizamos a data no topo desta
+          página e avisamos os assinantes pelo email cadastrado, com pelo menos
+          <strong>15 dias de antecedência</strong> antes da mudança entrar em vigor.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Não somos afiliados ao Mercado Livre</h2>
+        <p>
+          O ML TURBO é um produto independente. Não somos afiliados, parceiros,
+          patrocinados ou endossados pelo Mercado Livre, MercadoLibre Inc. ou qualquer
+          empresa do grupo. "Mercado Livre" é marca registrada de seus respectivos
+          donos.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <span class="marca">
+          <span class="marca-icone">M</span>
+          <span class="marca-texto">ML TURBO</span>
+        </span>
+        <p class="rodape-descricao">Calculadora de margem para vendedores do Mercado Livre.</p>
+      </div>
+      <div class="rodape-info">
+        <div class="rodape-contato">
+          <strong>Contato:</strong>
+          <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>
+        </div>
+        <div class="rodape-empresa">
+          <p><strong>LOTUS NEGÓCIOS LTDA</strong><br>
+          CNPJ: 45.537.878/0001-07<br>
+          R. Alberto Alves, 223 — Mogi das Cruzes, SP<br>
+          CEP 08745-350</p>
+        </div>
+      </div>
+      <div class="rodape-creditos">
+        <div class="rodape-links">
+          <a href="privacidade.html" class="rodape-link">Política de Privacidade</a>
+          <a href="termos-uso.html" class="rodape-link">Termos de Uso</a>
+        </div>
+        <small>© 2026 ML TURBO. Não somos afiliados, parceiros ou endossados pelo Mercado Livre.</small>
+        <p class="rodape-disclaimer">
+          <small>
+            O ML TURBO é uma ferramenta de cálculo e não garante aumento de vendas ou lucros. 
+            Os resultados dependem de como você usa as informações. Coletamos apenas seu email para autenticação — 
+            não vendemos nem compartilhamos seus dados com terceiros.
+          </small>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

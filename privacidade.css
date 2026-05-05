@@ -1,0 +1,133 @@
+/* Estilos específicos da Política de Privacidade.
+   Reutiliza tokens e classes do styles.css principal. */
+
+.container-estreito {
+  max-width: 760px;
+}
+
+.privacidade {
+  padding: 60px 0 80px;
+  background: var(--fundo);
+}
+
+.privacidade-data {
+  font-size: 13px;
+  color: var(--texto-claro);
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.privacidade h1 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--texto);
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.privacidade-resumo {
+  background: linear-gradient(135deg, var(--roxo-pastel), #ffffff);
+  border-left: 4px solid var(--roxo);
+  padding: 20px 24px;
+  border-radius: var(--raio-pequeno);
+  font-size: 16px;
+  color: var(--texto-medio);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.privacidade-resumo strong {
+  color: var(--texto);
+}
+
+.privacidade section {
+  margin-bottom: 36px;
+}
+
+.privacidade h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--texto);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.privacidade h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--texto);
+  margin: 18px 0 8px;
+}
+
+.privacidade p {
+  color: var(--texto-medio);
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+.privacidade p strong {
+  color: var(--texto);
+}
+
+.privacidade ul {
+  list-style: none;
+  margin: 12px 0 16px;
+  padding: 0;
+}
+
+.privacidade ul li {
+  position: relative;
+  padding: 6px 0 6px 26px;
+  color: var(--texto-medio);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.privacidade ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  background: var(--roxo-pastel);
+  color: var(--roxo);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacidade-lista-negativa li::before {
+  content: "✕";
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.privacidade ul li strong {
+  color: var(--texto);
+}
+
+.privacidade a {
+  color: var(--roxo);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.privacidade a:hover {
+  text-decoration: underline;
+}
+
+.privacidade code {
+  background: var(--fundo-claro);
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: var(--roxo-mais-escuro);
+}
