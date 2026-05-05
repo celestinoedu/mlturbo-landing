@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ML TURBO — extensão Chrome para vendedores do Mercado Livre. Calcule margem, ROI e taxa real direto na página do anúncio.">
+  <title>ML TURBO — Calculadora de margem para vendedores do Mercado Livre</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a href="#" class="marca">
+        <span class="marca-icone">M</span>
+        <span class="marca-texto">ML TURBO</span>
+      </a>
+      <nav class="topo-nav">
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#preco">Preço</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#preco" class="botao botao-primario botao-pequeno">Ver planos</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-conteudo">
+      <span class="badge">Para vendedores do Mercado Livre</span>
+      <h1>Pare de vender no <span class="palavra-rotativa">
+        <span>prejuízo</span>
+        <span>escuro</span>
+        <span>achismo</span>
+        <span>chutão</span>
+      </span>.</h1>
+      <p class="subtitulo">
+        Calcule a margem real do seu anúncio em <strong>1 clique</strong> — direto na página do Mercado Livre.
+        Compare Clássico e Premium, veja taxas reais por categoria e descubra <em>quanto sobra de verdade</em> em cada venda.
+      </p>
+      <div class="hero-acoes">
+        <a href="#preco" class="botao botao-primario botao-grande">Comece a partir de R$ 12,50/mês</a>
+        <a href="#como-funciona" class="botao botao-fantasma botao-grande">Ver como funciona</a>
+      </div>
+      <p class="hero-rodape">Plano mensal ou anual. Você fala com a gente, paga e libera o acesso.</p>
+    </div>
+  </section>
+
+  <section class="problema">
+    <div class="container">
+      <div class="problema-grid">
+        <div class="problema-texto">
+          <h2>Quanto você está deixando na mesa?</h2>
+          <p>
+            A maioria dos vendedores do ML decora "uns 12% de taxa" e bate o preço no olho.
+            Mas a taxa real <strong>varia por categoria</strong>, tem <strong>custo fixo embutido</strong>
+            em alguns anúncios e o frete <strong>nem sempre é o que você imagina</strong>.
+          </p>
+          <p>
+            O resultado? Anúncios que parecem lucrativos no papel e sangram no fim do mês.
+            O <strong>ML TURBO</strong> resolve isso fazendo a conta certa, com os dados reais do ML, no seu navegador.
+          </p>
+        </div>
+        <ul class="problema-lista">
+          <li><strong>Taxa real</strong> da categoria do seu produto</li>
+          <li><strong>Custo fixo</strong> do ML detectado automaticamente</li>
+          <li>Comparação <strong>Clássico vs Premium</strong> lado a lado</li>
+          <li>Cálculo direto da <strong>margem que você quer atingir</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="funcionalidades" class="funcionalidades">
+    <div class="container">
+      <h2 class="secao-titulo">Tudo o que você precisa pra precificar bem</h2>
+      <div class="cards-funcionalidades">
+        <article class="card-funcionalidade">
+          <div class="card-icone">📊</div>
+          <h3>Calculadora de contribuição</h3>
+          <p>Custos totais, margem de contribuição e ROI calculados na hora, comparando Anúncio Clássico e Premium.</p>
+        </article>
+        <article class="card-funcionalidade">
+          <div class="card-icone">⚡</div>
+          <h3>Leitura automática do anúncio</h3>
+          <p>Abriu um anúncio? Título, preço, frete e categoria já entram pré-preenchidos. Sem digitar nada.</p>
+        </article>
+        <article class="card-funcionalidade">
+          <div class="card-icone">🎯</div>
+          <h3>Taxa real por categoria</h3>
+          <p>Integrado à API oficial do Mercado Livre. A taxa que aparece é a que o ML cobra de verdade naquela categoria.</p>
+        </article>
+        <article class="card-funcionalidade">
+          <div class="card-icone">💰</div>
+          <h3>Custo fixo detectado</h3>
+          <p>Aquele R$ 6,00 que o ML cobra em anúncios baratos? Aparece numa linha separada, sem confundir sua conta.</p>
+        </article>
+        <article class="card-funcionalidade">
+          <div class="card-icone">🎚️</div>
+          <h3>Modo "margem desejada"</h3>
+          <p>Diga quanto você quer ganhar (em R$ ou %) e o ML TURBO calcula exatamente o preço de venda necessário.</p>
+        </article>
+        <article class="card-funcionalidade">
+          <div class="card-icone">🛡️</div>
+          <h3>100% no seu navegador</h3>
+          <p>Seus dados ficam no seu Chrome. Não enviamos pra lugar nenhum além das APIs oficiais do ML pra buscar taxas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="como-funciona">
+    <div class="container">
+      <h2 class="secao-titulo">Como funciona — em 3 passos</h2>
+      <div class="passos">
+        <div class="passo">
+          <div class="passo-numero">1</div>
+          <h3>Compre o acesso</h3>
+          <p>Clique em "Quero comprar", envie um email rápido e receba a chave Pix. Pago, liberamos seu email no sistema.</p>
+        </div>
+        <div class="passo">
+          <div class="passo-numero">2</div>
+          <h3>Instale a extensão</h3>
+          <p>Você recebe o link da Chrome Web Store. Instala em 1 clique e faz login com o email cadastrado.</p>
+        </div>
+        <div class="passo">
+          <div class="passo-numero">3</div>
+          <h3>Use dentro do ML</h3>
+          <p>Abra qualquer anúncio. Clique no botão flutuante <strong>"Ferramentas"</strong> no canto da tela. Pronto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preco" class="preco">
+    <div class="container">
+      <h2 class="secao-titulo">Escolha seu plano</h2>
+      <p class="preco-descricao">Mesmas funcionalidades nos dois planos. A única diferença é o jeito que você paga.</p>
+
+      <div class="planos">
+        <article class="card-preco card-preco-mensal">
+          <span class="card-preco-tag card-preco-tag-mensal">Mensal</span>
+          <div class="card-preco-valor">
+            <span class="moeda">R$</span>
+            <span class="numero">19,90</span>
+            <span class="periodo">/mês</span>
+          </div>
+          <p class="card-preco-resumo">Cobrança recorrente todo mês</p>
+          <ul class="card-preco-lista">
+            <li>Calculadora de contribuição completa</li>
+            <li>Leitura automática de anúncios</li>
+            <li>Taxas reais por categoria via API do ML</li>
+            <li>Comparação Clássico vs Premium</li>
+            <li>Modo "margem desejada"</li>
+            <li>Atualizações sempre incluídas</li>
+            <li>Cancele quando quiser, sem fidelidade</li>
+          </ul>
+          <a href="mailto:contato@mlturbo.com?subject=Quero%20comprar%20o%20ML%20TURBO%20-%20Plano%20Mensal&body=Ol%C3%A1%2C%20Eduardo!%0A%0AGostaria%20de%20adquirir%20acesso%20ao%20ML%20TURBO%20no%20plano%20MENSAL%20(R%24%20%2019%2C90%2Fm%C3%AAs).%0A%0AMeu%20email%20que%20deve%20ser%20liberado%3A%20%5Bcoloque%20aqui%20o%20mesmo%20email%20que%20voc%C3%AA%20vai%20usar%20pra%20logar%5D%0A%0AAguardo%20a%20chave%20Pix%20pra%20pagamento.%0A%0AObrigado!" class="botao botao-secundario-largo botao-grande botao-largura-total">
+            Assinar mensal
+          </a>
+          <p class="card-preco-rodape">Pagamento via Pix. Liberamos o acesso no mesmo dia.</p>
+        </article>
+
+        <article class="card-preco card-preco-anual card-preco-destaque">
+          <span class="card-preco-tag card-preco-tag-economia">Economize 37%</span>
+          <div class="card-preco-valor-comparacao">
+            <span class="card-preco-de">de R$ 19,90/mês</span>
+          </div>
+          <div class="card-preco-valor">
+            <span class="moeda">R$</span>
+            <span class="numero">12,50</span>
+            <span class="periodo">/mês<sup>*</sup></span>
+          </div>
+          <p class="card-preco-asterisco">
+            <strong>*</strong> Valor referente ao plano anual.
+            <strong>Cobrança única de R$ 150,00/ano.</strong>
+          </p>
+          <ul class="card-preco-lista">
+            <li>Calculadora de contribuição completa</li>
+            <li>Leitura automática de anúncios</li>
+            <li>Taxas reais por categoria via API do ML</li>
+            <li>Comparação Clássico vs Premium</li>
+            <li>Modo "margem desejada"</li>
+            <li>Atualizações sempre incluídas</li>
+            <li><strong>Economia de R$ 88,80 por ano</strong></li>
+          </ul>
+          <a href="mailto:contato@mlturbo.com?subject=Quero%20comprar%20o%20ML%20TURBO%20-%20Plano%20Anual&body=Ol%C3%A1%2C%20Eduardo!%0A%0AGostaria%20de%20adquirir%20acesso%20ao%20ML%20TURBO%20no%20plano%20ANUAL%20(R%24%20150%2C00%2Fano%20-%20equivalente%20a%20R%24%2012%2C50%2Fm%C3%AAs).%0A%0AMeu%20email%20que%20deve%20ser%20liberado%3A%20%5Bcoloque%20aqui%20o%20mesmo%20email%20que%20voc%C3%AA%20vai%20usar%20pra%20logar%5D%0A%0AAguardo%20a%20chave%20Pix%20pra%20pagamento.%0A%0AObrigado!" class="botao botao-primario botao-grande botao-largura-total">
+            Assinar anual e economizar
+          </a>
+          <p class="card-preco-rodape">Pagamento via Pix. Liberamos o acesso no mesmo dia.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2 class="secao-titulo">Perguntas frequentes</h2>
+      <div class="faq-lista">
+        <details class="faq-item">
+          <summary>Como recebo o acesso depois de pagar?</summary>
+          <p>Assim que confirmamos o Pix, cadastramos seu email no sistema e te respondemos por email com o link da extensão e instruções de instalação. Costuma sair no mesmo dia.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Funciona em mais de um computador?</summary>
+          <p>Sim. O acesso é vinculado ao <strong>seu email</strong>, não à máquina. Você pode instalar a extensão em quantos computadores quiser e logar com o mesmo email em todos.</p>
+        </details>
+        <details class="faq-item">
+          <summary>E se eu quiser cancelar?</summary>
+          <p>Sem letrinha miúda — é só me avisar por email. Não cobramos multa, não tem fidelidade, não tem nada parecido. Se você não usar, não pago.</p>
+        </details>
+        <details class="faq-item">
+          <summary>A extensão acessa minhas vendas ou meu painel do Mercado Livre?</summary>
+          <p>Não. A extensão lê apenas <strong>a página de anúncio aberta no seu navegador</strong> (público, qualquer um vê) e consulta a <strong>API pública oficial do ML</strong> pra buscar taxas. Nada do seu painel de vendedor é acessado.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Funciona em qualquer categoria?</summary>
+          <p>Sim. Quando dá pra detectar a categoria do anúncio, usamos a taxa exata daquela categoria via API do ML. Quando não dá (raro), usamos os defaults (11,5% / 16,5%) que você pode ajustar manualmente.</p>
+        </details>
+        <details class="faq-item">
+          <summary>O frete que aparece está sempre certo?</summary>
+          <p>O frete lido é o que aparece pro comprador. Pra <strong>Envio Full</strong>, o ML cobra do vendedor uma tarifa diferente (por peso e dimensão). A extensão te avisa pra conferir e o campo é editável.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Funciona em outros navegadores?</summary>
+          <p>No momento, só Chrome. O Edge tem grandes chances de funcionar (mesma base técnica) mas ainda não testamos oficialmente.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container cta-final-conteudo">
+      <h2>Pronto pra parar de vender no escuro?</h2>
+      <p>A partir de <strong>R$ 12,50/mês</strong> — menos do que uma única venda no prejuízo.</p>
+      <a href="#preco" class="botao botao-primario botao-grande">Ver planos e assinar</a>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <span class="marca">
+          <span class="marca-icone">M</span>
+          <span class="marca-texto">ML TURBO</span>
+        </span>
+        <p class="rodape-descricao">Calculadora de margem para vendedores do Mercado Livre.</p>
+      </div>
+      <div class="rodape-info">
+        <div class="rodape-contato">
+          <strong>Contato:</strong>
+          <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>
+        </div>
+        <div class="rodape-empresa">
+          <p><strong>LOTUS NEGÓCIOS LTDA</strong><br>
+          CNPJ: 45.537.878/0001-07<br>
+          R. Alberto Alves, 223 — Mogi das Cruzes, SP<br>
+          CEP 08745-350</p>
+        </div>
+      </div>
+      <div class="rodape-creditos">
+        <div class="rodape-links">
+          <a href="privacidade.html" class="rodape-link">Política de Privacidade</a>
+          <a href="termos-uso.html" class="rodape-link">Termos de Uso</a>
+        </div>
+        <small>© 2026 ML TURBO. Não somos afiliados, parceiros ou endossados pelo Mercado Livre.</small>
+        <p class="rodape-disclaimer">
+          <small>
+            O ML TURBO é uma ferramenta de cálculo e não garante aumento de vendas ou lucros. 
+            Os resultados dependem de como você usa as informações. Coletamos apenas seu email para autenticação — 
+            não vendemos nem compartilhamos seus dados com terceiros.
+          </small>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
