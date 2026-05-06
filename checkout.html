@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Checkout de pagamento do ML TURBO — escolha seu plano, pague via InfinitePay e libere seu email.">
+  <meta name="description" content="Checkout do ML TURBO — finalize sua assinatura e libere o acesso à extensão.">
   <title>Checkout — ML TURBO</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,9 +21,9 @@
   <main class="checkout-page">
     <div class="container container-estreito">
       <section class="checkout-hero">
-        <span class="badge">Checkout seguro InfinitePay</span>
+        <span class="badge">Pagamento seguro</span>
         <h1>Finalizar assinatura do ML TURBO</h1>
-        <p>Escolha seu plano, informe o email que será liberado e vá direto para o pagamento via Pix ou cartão.</p>
+        <p>Pague via Mercado Pago e libere o acesso à extensão na hora.</p>
       </section>
 
       <section class="checkout-painel">
@@ -39,28 +39,66 @@
             </div>
           </div>
 
-          <form id="checkout-form" class="checkout-form">
-            <label class="campo-label" for="email">Email que será liberado</label>
-            <input id="email" name="email" type="email" placeholder="seu@email.com" required>
+          <div id="estado-form" class="checkout-estado">
+            <form id="checkout-form" class="checkout-form">
+              <label class="campo-label" for="email">Email que será liberado</label>
+              <input id="email" name="email" type="email" placeholder="seu@email.com" required autocomplete="email">
 
-            <button type="submit" id="checkout-submit" class="botao botao-primario botao-largura-total">Ir para pagamento</button>
+              <button type="submit" id="checkout-submit" class="botao botao-primario botao-largura-total">Ir para pagamento</button>
 
-            <p class="checkout-recorrencia">
-              Cobrança automática recorrente via InfinitePay. Você pode cancelar a qualquer momento mandando um email para <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>.
+              <p class="checkout-recorrencia">
+                Cobrança automática recorrente. Você pode cancelar a qualquer momento mandando um email para <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>.
+              </p>
+            </form>
+          </div>
+
+          <div id="estado-aguardando" class="checkout-estado hidden">
+            <p class="aguardando-tag">Aguardando pagamento</p>
+            <h3 class="aguardando-titulo">Termine o pagamento na nova aba</h3>
+            <p class="aguardando-texto">
+              Abrimos o checkout seguro para você. Após confirmar o pagamento, volte aqui e clique no botão abaixo para liberar seu acesso.
             </p>
-          </form>
+            <p class="aguardando-email">
+              Email cadastrado: <strong id="aguardando-email-valor">—</strong>
+            </p>
+            <button type="button" id="botao-ja-assinei" class="botao botao-primario botao-largura-total">Já assinei — liberar meu acesso</button>
+            <p class="aguardando-rodape">
+              <a href="#" id="reabrir-checkout">Não abriu? Clique aqui pra abrir de novo</a>
+              <span class="aguardando-separador">·</span>
+              <a href="#" id="trocar-plano">Voltar e mudar de plano</a>
+            </p>
+          </div>
+
+          <div id="estado-erro" class="checkout-estado hidden">
+            <p class="aguardando-tag aguardando-tag-aviso">Ainda não encontramos seu acesso</p>
+            <h3 class="aguardando-titulo">Pagamento ainda processando</h3>
+            <p id="erro-mensagem" class="aguardando-texto">
+              Pode levar alguns minutos para o pagamento ser confirmado pelo banco. Aguarde um momento e tente novamente.
+            </p>
+            <p class="aguardando-texto">
+              Se você usou um <strong>email diferente</strong> no pagamento, digite ele abaixo:
+            </p>
+            <form id="form-reenviar" class="checkout-form">
+              <label class="campo-label" for="email-retry">Email usado no pagamento</label>
+              <input id="email-retry" name="email" type="email" placeholder="seu@email.com" required autocomplete="email">
+              <button type="submit" class="botao botao-primario botao-largura-total">Tentar novamente</button>
+            </form>
+            <p class="aguardando-rodape">
+              Não funcionou em até 1 hora? Mande um email pra <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a> com o comprovante e a gente libera no manual.
+            </p>
+          </div>
         </div>
 
         <aside class="checkout-help">
-          <h2>Como pagar</h2>
+          <h2>Como funciona</h2>
           <ol>
-            <li>Preencha seu email e clique em <strong>Ir para pagamento</strong>.</li>
-            <li>Você será levado para o checkout seguro da InfinitePay.</li>
-            <li>Escolha pagar com <strong>Pix</strong> ou <strong>cartão de crédito</strong> e autorize a cobrança recorrente.</li>
-            <li>Assim que o pagamento for confirmado, liberamos seu acesso no sistema (no mesmo dia).</li>
+            <li>Você é levado pro checkout seguro do Mercado Pago numa nova aba.</li>
+            <li>Paga com <strong>cartão de crédito</strong> ou <strong>Pix</strong> e autoriza a recorrência.</li>
+            <li>Volta aqui e clica em <strong>"Já assinei"</strong>.</li>
+            <li>Liberamos seu acesso na hora e mostramos como instalar a extensão.</li>
           </ol>
           <p class="checkout-help-strong">Importante:</p>
-          <p>O email informado deve ser o mesmo que você usará para acessar o ML TURBO.</p>
+          <p>Use o <strong>mesmo email</strong> aqui no cadastro e no pagamento. É por ele que a gente identifica seu acesso.</p>
         </aside>
       </section>
     </div>
@@ -93,8 +131,8 @@
         <small>© 2026 ML TURBO. Não somos afiliados, parceiros ou endossados pelo Mercado Livre.</small>
         <p class="rodape-disclaimer">
           <small>
-            O ML TURBO é uma ferramenta de cálculo e não garante aumento de vendas ou lucros. 
-            Os resultados dependem de como você usa as informações. Coletamos apenas seu email para autenticação — 
+            O ML TURBO é uma ferramenta de cálculo e não garante aumento de vendas ou lucros.
+            Os resultados dependem de como você usa as informações. Coletamos apenas seu email para autenticação —
             não vendemos nem compartilhamos seus dados com terceiros.
           </small>
         </p>
