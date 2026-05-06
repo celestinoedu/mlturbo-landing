@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout de pagamento do ML TURBO — escolha seu plano, pague via InfinitePay e libere seu email.">
+  <title>Checkout — ML TURBO</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a href="index.html" class="marca">
+        <span class="marca-icone">M</span>
+        <span class="marca-texto">ML TURBO</span>
+      </a>
+      <a href="index.html" class="botao botao-primario botao-pequeno">Voltar à página inicial</a>
+    </div>
+  </header>
+
+  <main class="checkout-page">
+    <div class="container container-estreito">
+      <section class="checkout-hero">
+        <span class="badge">Checkout seguro InfinitePay</span>
+        <h1>Finalizar assinatura do ML TURBO</h1>
+        <p>Escolha seu plano, informe o email que será liberado e vá direto para o pagamento via Pix ou cartão.</p>
+      </section>
+
+      <section class="checkout-painel">
+        <div class="checkout-card">
+          <div class="checkout-card-header">
+            <div>
+              <p class="checkout-label">Plano selecionado</p>
+              <h2 id="checkout-plan-name">Plano Mensal</h2>
+            </div>
+            <div class="checkout-preco">
+              <span id="checkout-plan-price">R$ 19,90</span>
+              <small id="checkout-plan-description">cobrado todo mês</small>
+            </div>
+          </div>
+
+          <form id="checkout-form" class="checkout-form">
+            <label class="campo-label" for="email">Email que será liberado</label>
+            <input id="email" name="email" type="email" placeholder="seu@email.com" required>
+
+            <button type="submit" id="checkout-submit" class="botao botao-primario botao-largura-total">Ir para pagamento</button>
+
+            <p class="checkout-recorrencia">
+              Cobrança automática recorrente via InfinitePay. Você pode cancelar a qualquer momento mandando um email para <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>.
+            </p>
+          </form>
+        </div>
+
+        <aside class="checkout-help">
+          <h2>Como pagar</h2>
+          <ol>
+            <li>Preencha seu email e clique em <strong>Ir para pagamento</strong>.</li>
+            <li>Você será levado para o checkout seguro da InfinitePay.</li>
+            <li>Escolha pagar com <strong>Pix</strong> ou <strong>cartão de crédito</strong> e autorize a cobrança recorrente.</li>
+            <li>Assim que o pagamento for confirmado, liberamos seu acesso no sistema (no mesmo dia).</li>
+          </ol>
+          <p class="checkout-help-strong">Importante:</p>
+          <p>O email informado deve ser o mesmo que você usará para acessar o ML TURBO.</p>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <span class="marca">
+          <span class="marca-icone">M</span>
+          <span class="marca-texto">ML TURBO</span>
+        </span>
+        <p class="rodape-descricao">Calculadora de margem para vendedores do Mercado Livre.</p>
+      </div>
+      <div class="rodape-info">
+        <div class="rodape-contato">
+          <strong>Contato:</strong>
+          <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>
+        </div>
+        <div class="rodape-empresa">
+          <p><strong>LOTUS NEGÓCIOS LTDA</strong><br>
+          CNPJ: 45.537.878/0001-07<br>
+          R. Alberto Alves, 223 — Mogi das Cruzes, SP<br>
+          CEP 08745-350</p>
+        </div>
+      </div>
+      <div class="rodape-creditos">
+        <a href="privacidade.html" class="rodape-link">Política de Privacidade</a>
+        <a href="termos-uso.html" class="rodape-link">Termos de Uso</a>
+        <small>© 2026 ML TURBO. Não somos afiliados, parceiros ou endossados pelo Mercado Livre.</small>
+        <p class="rodape-disclaimer">
+          <small>
+            O ML TURBO é uma ferramenta de cálculo e não garante aumento de vendas ou lucros. 
+            Os resultados dependem de como você usa as informações. Coletamos apenas seu email para autenticação — 
+            não vendemos nem compartilhamos seus dados com terceiros.
+          </small>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
