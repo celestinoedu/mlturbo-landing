@@ -39,52 +39,14 @@
             </div>
           </div>
 
-          <div id="estado-form" class="checkout-estado">
-            <form id="checkout-form" class="checkout-form">
-              <label class="campo-label" for="email">Email que será liberado</label>
-              <input id="email" name="email" type="email" placeholder="seu@email.com" required autocomplete="email">
+          <div id="checkout-form" class="checkout-form">
+            <label class="campo-label" for="email">Email que será liberado</label>
+            <input id="email" type="email" placeholder="seu@email.com" required autocomplete="email">
 
-              <button type="submit" id="checkout-submit" class="botao botao-primario botao-largura-total">Ir para pagamento</button>
+            <a id="botao-pagamento" target="_blank" rel="noopener" class="botao botao-primario botao-largura-total">Ir para pagamento</a>
 
-              <p class="checkout-recorrencia">
-                Cobrança automática recorrente. Você pode cancelar a qualquer momento mandando um email para <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>.
-              </p>
-            </form>
-          </div>
-
-          <div id="estado-aguardando" class="checkout-estado hidden">
-            <p class="aguardando-tag">Aguardando pagamento</p>
-            <h3 class="aguardando-titulo">Termine o pagamento na nova aba</h3>
-            <p class="aguardando-texto">
-              Abrimos o checkout seguro para você. Após confirmar o pagamento, volte aqui e clique no botão abaixo para liberar seu acesso.
-            </p>
-            <p class="aguardando-email">
-              Email cadastrado: <strong id="aguardando-email-valor">—</strong>
-            </p>
-            <button type="button" id="botao-ja-assinei" class="botao botao-primario botao-largura-total">Já assinei — liberar meu acesso</button>
-            <p class="aguardando-rodape">
-              <a href="#" id="reabrir-checkout">Não abriu? Clique aqui pra abrir de novo</a>
-              <span class="aguardando-separador">·</span>
-              <a href="#" id="trocar-plano">Voltar e mudar de plano</a>
-            </p>
-          </div>
-
-          <div id="estado-erro" class="checkout-estado hidden">
-            <p class="aguardando-tag aguardando-tag-aviso">Ainda não encontramos seu acesso</p>
-            <h3 class="aguardando-titulo">Pagamento ainda processando</h3>
-            <p id="erro-mensagem" class="aguardando-texto">
-              Pode levar alguns minutos para o pagamento ser confirmado pelo banco. Aguarde um momento e tente novamente.
-            </p>
-            <p class="aguardando-texto">
-              Se você usou um <strong>email diferente</strong> no pagamento, digite ele abaixo:
-            </p>
-            <form id="form-reenviar" class="checkout-form">
-              <label class="campo-label" for="email-retry">Email usado no pagamento</label>
-              <input id="email-retry" name="email" type="email" placeholder="seu@email.com" required autocomplete="email">
-              <button type="submit" class="botao botao-primario botao-largura-total">Tentar novamente</button>
-            </form>
-            <p class="aguardando-rodape">
-              Não funcionou em até 1 hora? Mande um email pra <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a> com o comprovante e a gente libera no manual.
+            <p class="checkout-recorrencia">
+              Cobrança automática recorrente via Mercado Pago. Você pode cancelar a qualquer momento mandando um email para <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>.
             </p>
           </div>
         </div>

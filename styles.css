@@ -787,6 +787,11 @@ img {
   align-items: start;
 }
 
+.checkout-painel-solo {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
 .checkout-card,
 .checkout-help {
   background: var(--fundo);
@@ -908,7 +913,7 @@ img {
 }
 
 /* Botão neutro pra plano mensal — visualmente menos chamativo
-   que o roxo do anual, pra direcionar o olhar pro plano em destaque. */
+   que o roxo do trimestral, pra direcionar o olhar pro plano em destaque. */
 .botao-secundario-largo {
   background: var(--fundo);
   color: var(--roxo);
@@ -919,6 +924,182 @@ img {
   background: var(--roxo-pastel);
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(79, 70, 229, 0.18);
+}
+
+/* ============== Estados do checkout (form / aguardando / erro) ============== */
+
+.checkout-estado {
+  animation: fadeIn 0.25s ease-out;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.aguardando-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--roxo-pastel);
+  color: var(--roxo);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.aguardando-tag-aviso {
+  background: #fff4e0;
+  color: #b45309;
+}
+
+.aguardando-titulo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--texto);
+  margin-bottom: 12px;
+}
+
+.aguardando-texto {
+  color: var(--texto-medio);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.aguardando-email {
+  background: var(--fundo-claro);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-pequeno);
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: var(--texto-medio);
+}
+
+.aguardando-email strong {
+  color: var(--texto);
+  word-break: break-all;
+}
+
+.aguardando-rodape {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--texto-medio);
+  text-align: center;
+  line-height: 1.8;
+}
+
+.aguardando-rodape a {
+  color: var(--roxo);
+  font-weight: 700;
+}
+
+.aguardando-separador {
+  margin: 0 8px;
+  color: var(--borda);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============== Página de boas-vindas ============== */
+
+.boas-vindas-passos {
+  display: grid;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.passo-card {
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-pequeno);
+  box-shadow: var(--sombra);
+  padding: 28px 30px;
+  position: relative;
+}
+
+.passo-card .passo-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--roxo);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.passo-card h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--texto);
+  margin-bottom: 12px;
+}
+
+.passo-card p {
+  color: var(--texto-medio);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.passo-card .botao {
+  margin-top: 4px;
+}
+
+.passo-aviso {
+  font-size: 13.5px;
+  color: var(--texto-medio);
+  background: var(--fundo-claro);
+  border-left: 3px solid var(--roxo);
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+
+.passo-lista {
+  margin: 8px 0 14px 22px;
+  color: var(--texto-medio);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.passo-lista li {
+  margin-bottom: 6px;
+}
+
+.boas-vindas-suporte {
+  margin-top: 36px;
+  padding: 26px 30px;
+  background: var(--fundo-claro);
+  border-radius: var(--raio-pequeno);
+  text-align: center;
+}
+
+.boas-vindas-suporte h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--texto);
+  margin-bottom: 12px;
+}
+
+.boas-vindas-suporte p {
+  color: var(--texto-medio);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.boas-vindas-suporte a {
+  color: var(--roxo);
+  font-weight: 700;
 }
 
 /* ============== FAQ ============== */

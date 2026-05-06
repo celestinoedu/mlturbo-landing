@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ML TURBO — aguardando confirmação do pagamento da sua assinatura.">
+  <title>Aguardando pagamento — ML TURBO</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a href="index.html" class="marca">
+        <span class="marca-icone">M</span>
+        <span class="marca-texto">ML TURBO</span>
+      </a>
+      <a href="index.html" class="botao botao-primario botao-pequeno">Voltar à página inicial</a>
+    </div>
+  </header>
+
+  <main class="checkout-page">
+    <div class="container container-estreito">
+      <section class="checkout-hero">
+        <span class="badge">Quase lá</span>
+        <h1>Aguardando confirmação do pagamento</h1>
+        <p>
+          Abrimos o checkout do Mercado Pago numa nova aba. Termine o pagamento por lá e volte aqui para liberar seu acesso.
+        </p>
+      </section>
+
+      <section class="checkout-painel-solo">
+        <div class="checkout-card">
+          <div class="checkout-card-header">
+            <div>
+              <p class="checkout-label">Plano selecionado</p>
+              <h2 id="checkout-plan-name">Plano Mensal</h2>
+            </div>
+            <div class="checkout-preco">
+              <span id="checkout-plan-price">R$ 19,90</span>
+              <small id="checkout-plan-description">cobrado todo mês</small>
+            </div>
+          </div>
+
+          <div id="estado-aguardando" class="checkout-estado">
+            <p class="aguardando-tag">Aguardando pagamento</p>
+            <h3 class="aguardando-titulo">Termine o pagamento na nova aba</h3>
+            <p class="aguardando-texto">
+              Após confirmar o pagamento no Mercado Pago, clique no botão abaixo para liberar seu acesso. A liberação é automática — leva poucos segundos.
+            </p>
+            <p class="aguardando-email">
+              Email cadastrado: <strong id="aguardando-email-valor">—</strong>
+            </p>
+            <button type="button" id="botao-ja-assinei" class="botao botao-primario botao-largura-total">Já assinei — liberar meu acesso</button>
+            <p class="aguardando-rodape">
+              <a id="reabrir-checkout" target="_blank" rel="noopener">Não abriu? Clique aqui para abrir de novo</a>
+              <span class="aguardando-separador">·</span>
+              <a href="checkout.html" id="trocar-plano">Voltar e mudar de plano</a>
+            </p>
+          </div>
+
+          <div id="estado-erro" class="checkout-estado hidden">
+            <p class="aguardando-tag aguardando-tag-aviso">Ainda não encontramos seu acesso</p>
+            <h3 class="aguardando-titulo">Pagamento ainda processando</h3>
+            <p id="erro-mensagem" class="aguardando-texto">
+              Pode levar alguns minutos para o Mercado Pago confirmar seu pagamento. Aguarde um pouco e tente novamente.
+            </p>
+            <p class="aguardando-texto">
+              Se você usou um <strong>email diferente</strong> no Mercado Pago, digite ele abaixo:
+            </p>
+            <form id="form-reenviar" class="checkout-form">
+              <label class="campo-label" for="email-retry">Email usado no pagamento</label>
+              <input id="email-retry" name="email" type="email" placeholder="seu@email.com" required autocomplete="email">
+              <button type="submit" class="botao botao-primario botao-largura-total">Tentar novamente</button>
+            </form>
+            <p class="aguardando-rodape">
+              Não funcionou em até 1 hora? Mande um email para <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a> com o comprovante e a gente libera no manual.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <span class="marca">
+          <span class="marca-icone">M</span>
+          <span class="marca-texto">ML TURBO</span>
+        </span>
+        <p class="rodape-descricao">Calculadora de margem para vendedores do Mercado Livre.</p>
+      </div>
+      <div class="rodape-info">
+        <div class="rodape-contato">
+          <strong>Contato:</strong>
+          <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a>
+        </div>
+        <div class="rodape-empresa">
+          <p><strong>LOTUS NEGÓCIOS LTDA</strong><br>
+          CNPJ: 45.537.878/0001-07<br>
+          R. Alberto Alves, 223 — Mogi das Cruzes, SP<br>
+          CEP 08745-350</p>
+        </div>
+      </div>
+      <div class="rodape-creditos">
+        <a href="privacidade.html" class="rodape-link">Política de Privacidade</a>
+        <a href="termos-uso.html" class="rodape-link">Termos de Uso</a>
+        <small>© 2026 ML TURBO. Não somos afiliados, parceiros ou endossados pelo Mercado Livre.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="aguardando.js"></script>
+</body>
+</html>
