@@ -11,12 +11,12 @@ const PLAN_LINKS = {
 const PLAN_DATA = {
   mensal: {
     title: 'Plano Mensal',
-    price: 'R$ 19,90',
+    price: 'R$ 4,99',
     description: 'cobrado todo mês'
   },
   trimestral: {
     title: 'Plano Trimestral',
-    price: 'R$ 49,90',
+    price: 'R$ 9,99',
     description: 'cobrado a cada 3 meses'
   }
 };
