@@ -1102,6 +1102,71 @@ img {
   font-weight: 700;
 }
 
+/* ============== Instruções (instrucoes.html) ============== */
+
+.instrucoes-indice {
+  background: var(--roxo-pastel);
+  border: 1px solid rgba(79, 70, 229, 0.18);
+  border-radius: var(--raio-pequeno);
+  padding: 20px 26px;
+  margin-bottom: 30px;
+}
+
+.instrucoes-indice strong {
+  display: block;
+  color: var(--roxo-mais-escuro);
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.instrucoes-indice ol {
+  margin: 0 0 0 20px;
+  color: var(--texto-medio);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.instrucoes-indice a {
+  color: var(--roxo);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.instrucoes-indice a:hover {
+  text-decoration: underline;
+}
+
+.instrucoes-subtitulo {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--texto);
+  margin: 18px 0 8px;
+}
+
+.instrucao-imagem {
+  margin: 16px 0 18px;
+  background: var(--fundo-claro);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-pequeno);
+  padding: 12px;
+}
+
+.instrucao-imagem img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--borda);
+  background: #fff;
+  display: block;
+}
+
+.instrucao-imagem figcaption {
+  font-size: 13.5px;
+  color: var(--texto-medio);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
 /* ============== FAQ ============== */
 
 .faq {
