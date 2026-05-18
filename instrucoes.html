@@ -5,22 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Como instalar e usar o ML TURBO — guia passo a passo com prints da extensão para vendedores do Mercado Livre.">
   <title>Como instalar e usar — ML TURBO</title>
+  <link rel="icon" type="image/png" href="imagens/logo/logo4-icon.png">
+  <link rel="apple-touch-icon" href="imagens/logo/logo4-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topo">
     <div class="container topo-conteudo">
-      <a href="index.html" class="marca">
-        <span class="marca-icone">M</span>
-        <span class="marca-texto">ML TURBO</span>
+      <a href="index.html" class="marca" aria-label="ML TURBO — Mais performance. Mais resultados.">
+        <img src="imagens/logo/Logo1-original-branco.png" alt="ML TURBO">
       </a>
-      <nav class="topo-nav">
+      <nav class="topo-nav" id="topo-nav">
         <a href="index.html#funcionalidades">Funcionalidades</a>
         <a href="index.html#como-funciona">Como funciona</a>
         <a href="index.html#preco">Preço</a>
         <a href="index.html#faq">FAQ</a>
+        <a href="index.html#preco" class="botao botao-primario botao-pequeno topo-cta-mobile">Ver planos</a>
       </nav>
       <a href="index.html#preco" class="botao botao-primario botao-pequeno">Ver planos</a>
+      <button class="topo-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="topo-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -156,8 +161,9 @@
 
           <h3 class="instrucoes-subtitulo">5.1 — Digite o email cadastrado</h3>
           <p>
-            Use exatamente o mesmo email que você usou na hora de assinar. Em seguida, clique
-            em <strong>"Enviar código"</strong>.
+            Use exatamente <strong>o mesmo email que apareceu no Mercado Pago</strong> quando
+            você pagou a assinatura — é nele que liberamos seu acesso. Em seguida, clique em
+            <strong>"Enviar código"</strong>.
           </p>
 
           <figure class="instrucao-imagem">
@@ -311,10 +317,18 @@
           <h3 class="instrucoes-subtitulo">"Recebi 'email não autorizado' no login"</h3>
           <p>
             Significa que aquele email ainda não foi liberado no nosso sistema. Costuma acontecer
-            se o pagamento ainda está sendo confirmado pelo Mercado Pago (leva alguns segundos),
-            ou se você digitou um email diferente do que usou na assinatura. Tente de novo em
-            1 minuto, ou mande email pra
-            <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a> contando o ocorrido.
+            por um destes motivos:
+          </p>
+          <ul class="passo-lista">
+            <li>O pagamento ainda está sendo confirmado pelo Mercado Pago — leva alguns segundos.
+            Aguarde 1 minuto e tente de novo.</li>
+            <li>Você está digitando <strong>um email diferente do que aparece na sua conta do Mercado Pago</strong>.
+            O acesso é sempre liberado pro email que efetivamente pagou. Tente com o email do MP.</li>
+          </ul>
+          <p>
+            Continuou? Mande um email pra
+            <a href="mailto:contato@mlturbo.com">contato@mlturbo.com</a> com o comprovante e
+            a gente libera no manual.
           </p>
 
           <h3 class="instrucoes-subtitulo">"O código não chegou no email"</h3>
@@ -349,10 +363,10 @@
     <div class="container rodape-conteudo">
       <div>
         <span class="marca">
-          <span class="marca-icone">M</span>
-          <span class="marca-texto">ML TURBO</span>
+          <img src="imagens/logo/logo2-fundo-escuro.png" alt="ML TURBO">
         </span>
-        <p class="rodape-descricao">Calculadora de margem para vendedores do Mercado Livre.</p>
+        <span class="marca-tagline">Mais performance. Mais resultados.</span>
+        <p class="rodape-descricao">Calculadora de margem real para vendedores do Mercado Livre.</p>
       </div>
       <div class="rodape-info">
         <div class="rodape-contato">
@@ -376,5 +390,27 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Toggle do menu mobile — mesmo padrão da home.
+    (function () {
+      var t = document.querySelector(".topo-toggle");
+      var n = document.querySelector(".topo-nav");
+      if (!t || !n) return;
+      function fechar() {
+        n.classList.remove("aberta");
+        t.setAttribute("aria-expanded", "false");
+        t.setAttribute("aria-label", "Abrir menu");
+      }
+      t.addEventListener("click", function () {
+        var aberta = n.classList.toggle("aberta");
+        t.setAttribute("aria-expanded", aberta ? "true" : "false");
+        t.setAttribute("aria-label", aberta ? "Fechar menu" : "Abrir menu");
+      });
+      n.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", fechar);
+      });
+    })();
+  </script>
 </body>
 </html>

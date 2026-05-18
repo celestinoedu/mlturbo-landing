@@ -166,48 +166,56 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 24px;
+  padding: 10px 24px;
   gap: 20px;
 }
 
+/* Marca — agora baseada em <img> do logo oficial.
+   Header usa Logo1 (fundo claro) e footer usa logo2 (fundo escuro).
+   A pulsação leve no ícone foi preservada via filter drop-shadow. */
 .marca {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   text-decoration: none;
   color: var(--texto);
-  font-weight: 700;
-  font-size: 18px;
 }
 
-.marca-icone {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  background: var(--amarelo-ml);
-  color: #111;
-  font-weight: 900;
-  border-radius: 6px;
-  font-size: 16px;
-  animation: pulseM 4s ease-in-out infinite;
+.marca img {
+  display: block;
+  height: 58px;
+  width: auto;
+  animation: pulseLogo 4s ease-in-out infinite;
   transform-origin: center;
 }
 
-@keyframes pulseM {
-  0%, 90%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 230, 0, 0); }
-  93%           { transform: scale(1.08); box-shadow: 0 0 14px rgba(255, 230, 0, 0.55); }
-  96%           { transform: scale(1); box-shadow: 0 0 0 rgba(255, 230, 0, 0); }
+@keyframes pulseLogo {
+  0%, 90%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(255, 230, 0, 0)); }
+  93%           { transform: scale(1.04); filter: drop-shadow(0 0 12px rgba(255, 230, 0, 0.45)); }
+  96%           { transform: scale(1); filter: drop-shadow(0 0 0 rgba(255, 230, 0, 0)); }
 }
 
-.marca-texto {
-  letter-spacing: 0.5px;
+/* Tagline pequena — aparece em alguns headers e no footer */
+.marca-tagline {
+  font-size: 10.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--texto-claro);
+  display: block;
+  margin-top: 2px;
+}
+
+/* O logo do rodapé (logo2-fundo-escuro.png) já traz a tagline gravada no arquivo,
+   então escondemos o .marca-tagline para não duplicar. */
+.rodape .marca-tagline {
+  display: none;
 }
 
 .topo-nav {
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 
 .topo-nav a {
@@ -220,6 +228,53 @@ img {
 
 .topo-nav a:hover {
   color: var(--roxo);
+}
+
+/* CTA dentro da nav — escondida no desktop (a do header já está visível),
+   aparece só quando o menu mobile abre. */
+.topo-cta-mobile {
+  display: none;
+}
+
+/* Hamburguer — escondido no desktop, visível ≤880px */
+.topo-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--borda);
+  background: var(--fundo);
+  border-radius: var(--raio-pequeno);
+  cursor: pointer;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  transition: border-color var(--transicao), background var(--transicao);
+}
+
+.topo-toggle:hover {
+  border-color: var(--roxo);
+}
+
+.topo-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--texto);
+  border-radius: 2px;
+  transition: transform var(--transicao), opacity var(--transicao);
+}
+
+/* "X" animado quando aberto */
+.topo-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.topo-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.topo-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ============== Hero ============== */
@@ -268,6 +323,39 @@ img {
   position: relative;
   text-align: center;
   max-width: 800px;
+}
+
+/* Logo grande dentro do hero (ícone M vazado sobre fundo roxo) */
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.hero-logo img {
+  height: 96px;
+  width: auto;
+  filter: drop-shadow(0 12px 30px rgba(255, 230, 0, 0.2));
+  animation: flutuarLogo 6s ease-in-out infinite;
+}
+
+@keyframes flutuarLogo {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* Tagline oficial — aparece logo abaixo do logo no hero */
+.hero-tagline {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--amarelo-ml);
+  font-weight: 800;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 230, 0, 0.35);
+  border-radius: 999px;
 }
 
 .badge {
@@ -743,6 +831,59 @@ img {
   margin-top: 14px;
   font-size: 12.5px;
   color: var(--texto-claro);
+}
+
+/* ============== Aviso de email (regra "mesmo email do MP") ==============
+   Componente reutilizável. Aparece na seção de preço, no checkout e
+   na página de aguardando. Visual coerente com a marca (roxo + ícone). */
+.aviso-email {
+  max-width: 720px;
+  margin: 40px auto 0;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, var(--roxo-pastel) 0%, #ffffff 100%);
+  border: 1.5px solid rgba(79, 70, 229, 0.2);
+  border-left: 4px solid var(--roxo);
+  border-radius: var(--raio-pequeno);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.06);
+}
+.aviso-email .aviso-email-icone {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  background: var(--roxo);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+.aviso-email .aviso-email-texto {
+  font-size: 14.5px;
+  color: var(--texto-medio);
+  line-height: 1.55;
+}
+.aviso-email .aviso-email-titulo {
+  display: block;
+  color: var(--roxo-mais-escuro);
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+.aviso-email strong {
+  color: var(--texto);
+}
+
+/* Compacto — vai dentro de cards de checkout */
+.aviso-email.compacto {
+  max-width: none;
+  margin: 0 0 20px;
 }
 
 /* ============== Checkout ============== */
@@ -1287,6 +1428,10 @@ img {
   margin-bottom: 8px;
 }
 
+.rodape .marca img {
+  height: 84px;
+}
+
 .rodape-descricao {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
@@ -1388,9 +1533,58 @@ img {
 /* ============== Responsivo ============== */
 
 @media (max-width: 880px) {
-  .topo-nav {
+  /* Mostra o hamburguer e esconde a CTA "Ver planos" do header (ela vai pro menu) */
+  .topo-toggle {
+    display: inline-flex;
+  }
+  .topo > .container > .botao,
+  .topo-conteudo > .botao {
     display: none;
   }
+
+  /* Nav vira dropdown abaixo do header */
+  .topo-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--fundo);
+    border-bottom: 1px solid var(--borda);
+    border-top: 1px solid var(--borda);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
+    pointer-events: none;
+  }
+  .topo {
+    position: sticky;
+  }
+  .topo-nav.aberta {
+    max-height: 460px;
+    padding: 10px 0 18px;
+    pointer-events: auto;
+  }
+  .topo-nav a {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--borda);
+    font-size: 15px;
+  }
+  .topo-nav a:last-child {
+    border-bottom: none;
+  }
+  /* Mostra a CTA dentro do menu mobile e dá respiro */
+  .topo-cta-mobile {
+    display: inline-flex !important;
+    margin: 14px 24px 0;
+    text-align: center;
+    justify-content: center;
+  }
+
   .problema-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1419,6 +1613,12 @@ img {
   }
   .container {
     padding: 0 18px;
+  }
+  .marca img {
+    height: 46px;
+  }
+  .rodape .marca img {
+    height: 66px;
   }
   .botao-grande {
     padding: 14px 20px;

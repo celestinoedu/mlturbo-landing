@@ -3,30 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ML TURBO — extensão Chrome para vendedores do Mercado Livre. Calcule margem, ROI e taxa real direto na página do anúncio.">
-  <title>ML TURBO — Calculadora de margem para vendedores do Mercado Livre</title>
+  <meta name="description" content="ML TURBO — Mais performance. Mais resultados. Extensão Chrome para vendedores do Mercado Livre: calcule margem real, ROI e taxa por categoria direto na página do anúncio.">
+
+  <title>ML TURBO — Calculadora de margem real para vendedores do Mercado Livre</title>
+  <link rel="icon" type="image/png" href="imagens/logo/logo4-icon.png">
+  <link rel="apple-touch-icon" href="imagens/logo/logo4-icon.png">
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mlturbo.com/">
+  <meta property="og:title" content="ML TURBO — Mais performance. Mais resultados.">
+  <meta property="og:description" content="Pare de vender no escuro. Calcule a margem real do seu anúncio do Mercado Livre em 1 clique. A partir de R$ 3,33/mês.">
+  <meta property="og:image" content="https://mlturbo.com/imagens/logo/Logo1-original-branco.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ML TURBO — Mais performance. Mais resultados.">
+  <meta name="twitter:description" content="Pare de vender no escuro. Calcule a margem real do seu anúncio do Mercado Livre em 1 clique.">
+  <meta name="twitter:image" content="https://mlturbo.com/imagens/logo/Logo1-original-branco.png">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topo">
     <div class="container topo-conteudo">
-      <a href="#" class="marca">
-        <span class="marca-icone">M</span>
-        <span class="marca-texto">ML TURBO</span>
+      <a href="#" class="marca" aria-label="ML TURBO — Mais performance. Mais resultados.">
+        <img src="imagens/logo/Logo1-original-branco.png" alt="ML TURBO">
       </a>
-      <nav class="topo-nav">
+      <nav class="topo-nav" id="topo-nav">
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#preco">Preço</a>
         <a href="instrucoes.html">Como usar</a>
         <a href="#faq">FAQ</a>
+        <a href="#preco" class="botao botao-primario botao-pequeno topo-cta-mobile">Ver planos</a>
       </nav>
       <a href="#preco" class="botao botao-primario botao-pequeno">Ver planos</a>
+      <button class="topo-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="topo-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <section class="hero">
     <div class="container hero-conteudo">
+      <div class="hero-logo">
+        <img src="imagens/logo/logo5-icon-M-transparente.png" alt="ML TURBO">
+      </div>
+      <span class="hero-tagline">Mais performance. Mais resultados.</span>
       <span class="badge">Para vendedores do Mercado Livre</span>
       <h1>Pare de vender no <span class="palavra-rotativa">
         <span>prejuízo</span>
@@ -36,7 +58,7 @@
       </span>.</h1>
       <p class="subtitulo">
         Calcule a margem real do seu anúncio em <strong>1 clique</strong> — direto na página do Mercado Livre.
-        Compare Clássico e Premium, veja taxas reais por categoria e descubra <em>quanto sobra de verdade</em> em cada venda.
+        Taxa real por categoria, comparação Clássico vs Premium e <em>quanto sobra de verdade</em> em cada venda.
       </p>
       <div class="hero-acoes">
         <a href="#preco" class="botao botao-primario botao-grande">Comece a partir de R$ 3,33/mês</a>
@@ -116,7 +138,7 @@
         <div class="passo">
           <div class="passo-numero">1</div>
           <h3>Compre o acesso</h3>
-          <p>Clique em "Quero comprar", envie um email rápido e receba a chave Pix. Pago, liberamos seu email no sistema.</p>
+          <p>Escolha seu plano e finalize no Mercado Pago. <strong>Use o mesmo email aqui e no MP</strong> — é por ele que liberamos o acesso.</p>
         </div>
         <div class="passo">
           <div class="passo-numero">2</div>
@@ -190,6 +212,14 @@
           <p class="card-preco-rodape">Pagamento via Pix ou cartão no checkout seguro do Mercado Pago.</p>
         </article>
       </div>
+
+      <div class="aviso-email">
+        <div class="aviso-email-icone" aria-hidden="true">✉</div>
+        <div class="aviso-email-texto">
+          <span class="aviso-email-titulo">Atenção ao seu email</span>
+          O acesso ao ML TURBO é liberado para <strong>o mesmo email que você usar no Mercado Pago</strong> ao pagar a assinatura. Use o seu email principal, o que você acessa todo dia — é por ele que a gente identifica seu acesso e que você vai usar para fazer login na extensão.
+        </div>
+      </div>
     </div>
   </section>
 
@@ -200,6 +230,12 @@
         <details class="faq-item">
           <summary>Como recebo o acesso depois de pagar?</summary>
           <p>Automático. Assim que o Mercado Pago confirma seu pagamento, nosso sistema libera seu email na hora — geralmente leva poucos segundos. Você fecha a janela do pagamento, volta pra nossa página e clica em "Já assinei" pra ir direto pras instruções de instalação.</p>
+          <p><strong>Importante:</strong> o acesso é liberado para <strong>o mesmo email que você usar no Mercado Pago</strong> ao pagar. Use o seu email principal — é por ele que a gente identifica você e que você vai usar pra logar na extensão.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Qual email eu uso pra pagar? E se eu usar um email diferente no Mercado Pago?</summary>
+          <p>Use <strong>o seu email principal</strong>, o mesmo que você confere todo dia — porque é nele que vamos liberar o acesso e nele que você vai logar na extensão.</p>
+          <p>Se por algum motivo você pagou com um email diferente do que cadastrou aqui, sem stress: na página seguinte ("Aguardando pagamento"), você pode digitar o email que <strong>de fato</strong> apareceu no Mercado Pago e a gente libera o acesso pra ele. O acesso vai sempre pra conta que efetivamente pagou.</p>
         </details>
         <details class="faq-item">
           <summary>Funciona em mais de um computador?</summary>
@@ -234,7 +270,8 @@
   <section class="cta-final">
     <div class="container cta-final-conteudo">
       <h2>Pronto pra parar de vender no escuro?</h2>
-      <p>A partir de <strong>R$ 3,33/mês</strong> — menos do que uma única venda no prejuízo.</p>
+      <p>A partir de <strong>R$ 3,33/mês</strong> — menos do que uma única venda no prejuízo.<br>
+      Mais performance. Mais resultados.</p>
       <a href="#preco" class="botao botao-primario botao-grande">Ver planos e assinar</a>
     </div>
   </section>
@@ -243,10 +280,10 @@
     <div class="container rodape-conteudo">
       <div>
         <span class="marca">
-          <span class="marca-icone">M</span>
-          <span class="marca-texto">ML TURBO</span>
+          <img src="imagens/logo/logo2-fundo-escuro.png" alt="ML TURBO">
         </span>
-        <p class="rodape-descricao">Calculadora de margem para vendedores do Mercado Livre.</p>
+        <span class="marca-tagline">Mais performance. Mais resultados.</span>
+        <p class="rodape-descricao">Calculadora de margem real para vendedores do Mercado Livre.</p>
       </div>
       <div class="rodape-info">
         <div class="rodape-contato">

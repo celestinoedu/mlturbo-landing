@@ -3,6 +3,26 @@
 // (IntersectionObserver) e efeito tilt 3D nos cards de funcionalidade.
 
 (function () {
+  // Menu mobile — abre/fecha a nav no botão hamburguer.
+  // Fecha automaticamente quando o usuário clica num link interno.
+  const toggle = document.querySelector(".topo-toggle");
+  const nav = document.querySelector(".topo-nav");
+  if (toggle && nav) {
+    const fechar = () => {
+      nav.classList.remove("aberta");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Abrir menu");
+    };
+    toggle.addEventListener("click", () => {
+      const aberta = nav.classList.toggle("aberta");
+      toggle.setAttribute("aria-expanded", aberta ? "true" : "false");
+      toggle.setAttribute("aria-label", aberta ? "Fechar menu" : "Abrir menu");
+    });
+    nav.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", fechar)
+    );
+  }
+
   // Tilt 3D nos cards de funcionalidade — segue o mouse com inclinação leve.
   // Usa transform 3D pra GPU acelerar; quando sai do card, volta ao normal.
   const cardsTilt = document.querySelectorAll(".card-funcionalidade");
